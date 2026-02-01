@@ -1,0 +1,108 @@
+.countdown-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e2f, #252540);
+  padding: 20px;
+}
+
+.countdown-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.timer-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on very small screens */
+  justify-content: center;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 100px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.time-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff4081;
+}
+
+.time-label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.back-btn:hover {
+  background: white;
+  color: #1e1e2f;
+}
+
+.celebration-message {
+  text-align: center;
+  color: #ff4081;
+}
+
+.celebration-message h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .countdown-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .timer-wrapper {
+    gap: 10px;
+  }
+
+  .time-box {
+    padding: 15px 15px;
+    min-width: 70px; /* Smaller boxes */
+  }
+
+  .time-value {
+    font-size: 1.5rem; /* Smaller numbers */
+  }
+
+  .time-label {
+    font-size: 0.7rem;
+  }
+  
+  .back-btn {
+    top: 15px;
+    left: 15px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

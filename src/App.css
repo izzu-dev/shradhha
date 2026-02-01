@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* You can change this font */
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}

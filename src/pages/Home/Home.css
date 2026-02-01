@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- HEADER STYLES --- */
+.birthday-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-style: italic;
+  color: #880e4f;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
+  line-height: 1.2;
+}
+
+.birthday-subtext {
+  font-size: 1.3rem;
+  color: #4a4a4a;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+/* --- CAROUSEL WRAPPER --- */
+.carousel-wrapper-style {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    margin: 40px 0;
+    z-index: 20; 
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+/* --- FLOATING TEXT NOTES --- */
+.floating-note {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 15px 20px;
+  border-radius: 15px 15px 15px 2px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-size: 0.9rem;
+  color: #6a1b9a;
+  max-width: 200px;
+  z-index: 5;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  pointer-events: none;
+}
+
+/* --- BUTTON & MESSAGE BOX --- */
+.timer-link-btn {
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #880e4f;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.message-box {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(136, 14, 79, 0.05);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.message-box h2 {
+  font-family: 'Playfair Display', serif;
+  color: #880e4f;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.message-box p {
+  color: #333;
+  line-height: 1.8;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px 10px; /* Less padding on sides */
+  }
+
+  .birthday-header {
+    font-size: 2.5rem; /* Smaller Title */
+  }
+
+  .birthday-subtext {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .message-box {
+    padding: 30px 20px; /* Smaller padding inside message box */
+    margin-top: 20px;
+  }
+
+  .message-box h2 {
+    font-size: 2rem;
+  }
+  
+  /* Hide floating notes on mobile to prevent overlap/mess */
+  .floating-note {
+    display: none;
+  }
+
+  .carousel-wrapper-style {
+    margin: 20px 0;
+    /* Less fade on mobile to show more photo */
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+}
